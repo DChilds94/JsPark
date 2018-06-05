@@ -11,13 +11,12 @@ let dino;
   });
 
 it('should be a Tyrannosaurus', function(){
-  // const dino = new Dino();
-// dino.type = "Tyrannosaurus"
+
   assert.strictEqual(dino1.type, "Tyrannosaurus")
 });
 
 it('should have 2 babies per year', function(){
-  // dino.offspringPerYear = 2;
+
   assert.strictEqual(dino1.offspringPerYear, 2)
 });
 
