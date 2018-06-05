@@ -28,5 +28,13 @@ describe("Park", function(){
     assert.strictEqual(park.enclosure.length, 2);
   });
 
+  it('should return dino2', function(){
+    park.add(dino1);
+    park.add(dino2);
+    park.add(dino3);
+    park.getHighBreeders()
+    assert.strictEqual(park.getHighBreeders(), dino2 );
+  });
+
 
 });
