@@ -20,5 +20,13 @@ describe("Park", function(){
     assert.strictEqual(park.enclosure.length, 1);
   });
 
+  it('should be able to remove a dino', function(){
+    park.add(dino1);
+    park.add(dino2);
+    park.add(dino3);
+    park.remove();
+    assert.strictEqual(park.enclosure.length, 2);
+  });
+
 
 });
