@@ -16,4 +16,9 @@ dino.type = "Tyrannosaurus"
   assert.strictEqual(dino.type, "Tyrannosaurus")
 });
 
+it('should have 2 babies per year', function(){
+  dino.offspringPerYear = 2;
+  assert.strictEqual(dino.offspringPerYear, 2)
+});
+
 });
