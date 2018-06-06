@@ -28,5 +28,10 @@ Park.prototype.getHighBreeders = function () {
     return dino;
 };
 
+Park.prototype.calculateOffSpringInAYear = function () {
+  for (const dino of this.enclosure)
+    return dino.offspringPerYear + this.enclosure.length;
+};
+
 
 module.exports = Park;

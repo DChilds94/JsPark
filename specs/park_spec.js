@@ -44,5 +44,11 @@ describe("Park", function(){
     assert.strictEqual(park.getHighBreeders(), dino2 );
   });
 
+  it("should be able to get how many dino1 there will be after 1 year", function (){
+  park.add(dino1);
+  // park.calculateOffSpringInAYear();
+  assert.strictEqual(park.calculateOffSpringInAYear(), 3);
+});
+
 
 });
