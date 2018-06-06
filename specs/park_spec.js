@@ -46,8 +46,17 @@ describe("Park", function(){
 
   it("should be able to get how many dino1 there will be after 1 year", function (){
   park.add(dino1);
-  // park.calculateOffSpringInAYear();
+  park.year = 1;
   assert.strictEqual(park.calculateOffSpringInAYear(), 3);
+});
+
+
+it('should be able to get how many dino1 there will be after 2 years', function (){
+  park2 = new Park()
+  park2.year = 2;
+  park2.add(dino1);
+  // console.log(park2.enclosure);
+  assert.strictEqual(park2.calculateOffSpringInAYear(), 6);
 });
 
 

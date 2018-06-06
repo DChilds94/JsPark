@@ -1,7 +1,8 @@
 const Dino = require('./dino.js');
 
-const Park = function(enclosure){
+const Park = function(enclosure, year){
   this.enclosure = [];
+  this.year = year
 }
 
 Park.prototype.add = function (dino) {
@@ -30,7 +31,7 @@ Park.prototype.getHighBreeders = function () {
 
 Park.prototype.calculateOffSpringInAYear = function () {
   for (const dino of this.enclosure)
-    return dino.offspringPerYear + this.enclosure.length;
+    return (dino.offspringPerYear + this.enclosure.length) * this.year;
 };
 
 
