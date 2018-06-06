@@ -7,7 +7,7 @@ describe("Park", function(){
   beforeEach(function(){
     dino1 = new Dino("Tyrannosaurus", 2);
     dino2 = new Dino("Velociraptor", 6);
-    dino3 = new Dino("Triceratops", 1);
+    dino3 = new Dino("Triceratops", 3);
     park = new Park();
   });
 
@@ -41,7 +41,7 @@ describe("Park", function(){
     park.add(dino2);
     park.add(dino3);
     park.getHighBreeders()
-    assert.strictEqual(park.getHighBreeders(), dino2 );
+    assert.strictEqual(park.getHighBreeders(), dino2, dino3 );
   });
 
   it("should be able to get how many dino1 there will be after 1 year", function (){
@@ -57,6 +57,14 @@ it('should be able to get how many dino1 there will be after 2 years', function 
   park2.add(dino1);
   // console.log(park2.enclosure);
   assert.strictEqual(park2.calculateOffSpringInAYear(), 6);
+});
+it('should be able to get how many dinos there will be after 2 years when there are two dinos', function (){
+  park2 = new Park()
+  park2.year = 2;
+  park2.add(dino1);
+  park2.add(dino2);
+  // console.log(park2.enclosure);
+  assert.strictEqual(park2.calculateOffSpringInAYear(), 20);
 });
 
 
