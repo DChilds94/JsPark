@@ -12,6 +12,12 @@ Park.prototype.remove = function() {
   this.enclosure.pop();
 }
 
+Park.prototype.removeByType = function(type) {
+  for (const dino of this.enclosure)
+    if (dino.type === type)
+    this.enclosure.pop();
+}
+
 // Park.prototype.getHighBreeders = function () {
 //   result = this.enclosure.filter(dino => dino.offspringPerYear > 2);
 //   return result
